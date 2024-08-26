@@ -36,15 +36,12 @@ func strStr(haystack string, needle string) int {
 		if subString == "" {
 			subString += string(needle[0])
 		}
-		fmt.Println("Currently checking ", "left:", l, "right:", r, "needle char position:", r-l)
 		if haystack[r] == needle[r-l] {
 			subString += string(needle[r-l])
-			fmt.Println(subString, "currently added is ", string(needle[r-l]))
 			if subString == needle {
 				return l
 			}
 		} else {
-			fmt.Println("Milena. Current Letter namileko", string(needle[r-l]))
 			subString = ""
 			l++
 			r = l
